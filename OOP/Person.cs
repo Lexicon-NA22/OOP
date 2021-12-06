@@ -6,17 +6,45 @@ using System.Threading.Tasks;
 
 namespace OOP
 {
-    internal class Person
+
+    public interface IPerson
+    {
+        string Name { get; set; }
+        void Do()
+        {
+            Console.WriteLine("Iperson");
+        }
+    } 
+    
+    public interface IPerson2
+    {
+       
+        void Do()
+        {
+            Console.WriteLine("Iperson2");
+        }
+    }
+
+    internal class Person 
     {
         public string Name { get; set; }
+
     }
 
-    internal class Employee : Person
+    internal class Employee : Person, IPerson, IPerson2
     {
         public int Salary { get; set; }
+
+        void IPerson.Do()
+        {
+            var x = this as IPerson;
+            x.Do();
+        }
+
+       
     }
 
-    internal class Admin : Employee
+    internal class Admin : Employee 
     {
         public string Department { get; set; }
     }

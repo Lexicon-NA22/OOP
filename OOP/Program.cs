@@ -6,11 +6,17 @@ namespace OOP
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee();
+            IPerson employee = new Employee();
+
+            employee.Do();
+
             Person person = new Person();
-            person = employee;
+           // person = employee;
             Person admin = new Admin();
             Admin admin1 = (Admin)admin;
+
+
+
            
         }
     }
