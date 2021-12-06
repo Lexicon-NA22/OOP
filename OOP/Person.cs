@@ -35,13 +35,6 @@ namespace OOP
     {
         public int Salary { get; set; }
 
-        void IPerson.Do()
-        {
-            var x = this as IPerson;
-            x.Do();
-        }
-
-       
     }
 
     internal class Admin : Employee 
