@@ -6,17 +6,18 @@ namespace OOP
     {
         static void Main(string[] args)
         {
-            IPerson employee = new Employee();
-            IPerson admin = new Admin();
+            //IPerson employee = new Employee();
+            //IPerson admin = new Admin();
 
-            employee.Do();
-            admin.Do();
+            //employee.Do();
+            //admin.Do();
 
-           // Person person = new Person();
-           //// person = employee;
-           // Admin admin1 = (Admin)admin;
+            // Person person = new Person();
+            //// person = employee;
+            // Admin admin1 = (Admin)admin;
 
-
+            Vehicle vehicle = new FuelVehicle();
+            Console.WriteLine(vehicle.Drive(100));
 
            
         }
