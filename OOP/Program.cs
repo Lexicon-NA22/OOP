@@ -7,13 +7,14 @@ namespace OOP
         static void Main(string[] args)
         {
             IPerson employee = new Employee();
+            IPerson admin = new Admin();
 
             employee.Do();
+            admin.Do();
 
-            Person person = new Person();
-           // person = employee;
-            Person admin = new Admin();
-            Admin admin1 = (Admin)admin;
+           // Person person = new Person();
+           //// person = employee;
+           // Admin admin1 = (Admin)admin;
 
 
 

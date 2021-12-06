@@ -10,28 +10,30 @@ namespace OOP
     public interface IPerson
     {
         string Name { get; set; }
-        void Do()
-        {
-            Console.WriteLine("Iperson");
-        }
+        void Do();
+
     } 
     
-    public interface IPerson2
-    {
+    //public interface IPerson2
+    //{
        
-        void Do()
-        {
-            Console.WriteLine("Iperson2");
-        }
-    }
+    //    void Do()
+    //    {
+    //        Console.WriteLine("Iperson2");
+    //    }
+    //}
 
-    internal class Person 
+    internal class Person : IPerson
     {
         public string Name { get; set; }
 
+        public virtual void Do()
+        {
+            Console.WriteLine("Person");
+        }
     }
 
-    internal class Employee : Person, IPerson, IPerson2
+    internal class Employee : Person
     {
         public int Salary { get; set; }
 
@@ -40,6 +42,12 @@ namespace OOP
     internal class Admin : Employee 
     {
         public string Department { get; set; }
+
+        public override void Do()
+        {
+            //base.Do();
+            Console.WriteLine("Admin");
+        }
     }
 
 
