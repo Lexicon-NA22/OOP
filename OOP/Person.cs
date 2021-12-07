@@ -12,16 +12,16 @@ namespace OOP
         string Name { get; set; }
         void Do();
 
-    } 
-    
-    //public interface IPerson2
-    //{
-       
-    //    void Do()
-    //    {
-    //        Console.WriteLine("Iperson2");
-    //    }
-    //}
+    }
+
+    public interface IPerson2
+    {
+
+        void Doing()
+        {
+            Console.WriteLine("Iperson2");
+        }
+    }
 
     internal class Person : IPerson
     {
@@ -39,7 +39,7 @@ namespace OOP
 
     }
 
-    internal class Admin : Employee 
+    internal class Admin : Employee, IPerson2
     {
         public string Department { get; set; }
 
@@ -47,6 +47,11 @@ namespace OOP
         {
             //base.Do();
             Console.WriteLine("Admin");
+        }
+
+        void IPerson2.Doing()
+        {
+            Console.WriteLine("Admin2");
         }
     }
 
