@@ -86,6 +86,13 @@ namespace OOP
         //    base.Print();
         //    return "Ceo";
         //}
+        public void TestException(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                throw new ArgumentException($"'{nameof(input)}' cannot be null or whitespace.", nameof(input));
+            }
+        }
     }
 
 

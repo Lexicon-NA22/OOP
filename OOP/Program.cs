@@ -7,6 +7,29 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+
+            Ceo ceo = new Ceo();
+            try
+            {
+                 ceo.TestException(null);
+
+            }
+            catch (ArgumentException ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            finally 
+            {
+                Console.WriteLine("Finally");
+            }
+
+
             IPerson iperson = new Person();
 
             if(iperson is IPerson)
