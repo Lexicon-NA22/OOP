@@ -57,6 +57,11 @@ namespace OOP
     {
         public string Department { get; set; }
 
+        //Ny implementation som inte har något med den ärvda Print metoden att göra.
+        //Den här metoden döljer den ärvda Print() metoden.
+        //Vi kan inte längre få åtkomst till den ärvda Print() från en instans. 
+        //Bättre att döpa om metoden till något annat för att undvika förvirring och misstag om det inte är så att vi har behov av precis nämda beteende
+        //I det här exemplet väljer vi även att markera den som virtual som får samma betydelse som vi är vana vid.
         public new virtual string Print()
         {
             return "Admin";
@@ -86,6 +91,8 @@ namespace OOP
         //    base.Print();
         //    return "Ceo";
         //}
+
+        //Kastar en exception när input är null eller whitespace
         public void TestException(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
