@@ -79,7 +79,7 @@ namespace OOP
         }
 
         //Property med enbart geter. Kan bara sättas via konstruktorn
-        public double FuelCapacity { get; }
+        public double FuelCapacity { get; } // = 34;
 
         //Nyckelordet base anropar här basklassens konstruktor
         public FuelVehicle(string regNo, double fuelCapacity, string brand = "default") : base(brand, regNo)

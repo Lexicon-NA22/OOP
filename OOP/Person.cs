@@ -31,17 +31,36 @@ namespace OOP
         {
             Console.WriteLine("Person");
         }
+
+        public virtual string Print()
+        {
+            return "Person";
+        }
     }
 
     internal class Employee : Person
     {
         public int Salary { get; set; }
 
+        public string EmployeeMethod()
+        {
+            return "From EmployeeMethod";
+        }
+        public override string Print()
+        {
+            return "Employee";
+        }
+
     }
 
     internal class Admin : Employee, IPerson2
     {
         public string Department { get; set; }
+
+        public new virtual string Print()
+        {
+            return "Admin";
+        }
 
         public override void Do()
         {
@@ -53,6 +72,20 @@ namespace OOP
         {
             Console.WriteLine("Admin2");
         }
+    }
+
+    internal class Ceo : Admin
+    {
+
+        public override string Print()
+        {
+            return base.Print();
+        }
+        //public new string Print()
+        //{
+        //    base.Print();
+        //    return "Ceo";
+        //}
     }
 
 
