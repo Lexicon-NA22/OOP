@@ -10,7 +10,7 @@ namespace OOP
     //Anropas på samma sätt som vanliga instans metoder
     //Måste ligga i en statisk klass
     //Måste vara en statisk metod
-    //this string visar att vi "extendar" typen string
+    //this string visar att vi "extendar" typen string ...
     public static class Extensions
     {
         //Här extendar typen string med en AddString metod
